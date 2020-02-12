@@ -1,0 +1,139 @@
+USE [DB_Music]
+
+
+SELECT * FROM [dbo].[TblMasterGenre]  --1
+
+SELECT * FROM [dbo].[TblMasterAlbum] --3
+
+SELECT * FROM [dbo].[TblMasterArtist] --13
+
+1)
+USE [DB_Music]
+GO
+
+INSERT INTO [dbo].[TblMasterGenre]
+           ([MusicType]
+           ,[CreatedDate]
+           ,[UpdatedDate]
+           ,[CreatedBy]
+           ,[ModifiedBy]
+           ,[IsDeleted]
+           )
+     VALUES
+           ('Classic'
+           ,GETDATE()
+           ,GETDATE()
+           ,'Rahul'
+           ,'Rahul D'
+           ,1
+          )
+GO
+
+
+
+2)
+
+
+USE [DB_Music]
+GO
+
+INSERT INTO [dbo].[TblMasterArtist]
+           ([FirstName]
+           ,[MiddleName]
+           ,[LastName]
+           ,[Gender]
+           ,[DOB]
+           ,[Email]
+           ,[Mobile]
+           ,[MaritalStatus]
+		   ,[IsDeleted]
+          )
+     VALUES
+           ('Rahul'
+           ,'Dilip'
+           ,'Dhatkar'
+           ,1
+           ,'1991-02-23 07:30:20'
+           ,'rahul123dhatkar@gmail.com'
+           ,'9763152013'
+           ,1
+		   ,0
+           )
+GO
+
+
+3)
+
+USE [DB_Music]
+GO
+
+INSERT INTO [dbo].[TblMasterAlbum]
+           ([Name]
+           ,[Image]
+           ,[ReleasedDate]
+           ,[Rating]
+           ,[Review]
+           ,[Price]
+           ,[ArtistId]
+           ,[CreatedDate]
+           ,[UpdatedDate]
+           ,[CreatedBy]
+           ,[ModifiedBy]
+           ,[IsDeleted]           
+           )
+     VALUES
+           ('Backstreet_Boys'
+           ,'test'
+           ,'2020-02-12 07:30:20'
+           ,5
+           ,'Top'
+           ,1.35
+           ,'13'
+           ,'2020-02-12 07:30:20'
+           ,GETDATE()
+           ,'Rahul'
+           ,'Rahul'
+           ,1      
+           )
+GO
+
+
+4)
+
+USE [DB_Music]
+GO
+
+INSERT INTO [dbo].[TblSongs]
+           ([GenreId]
+           ,[AlbumId]
+           ,[ArtistId]
+           ,[Name]
+           ,[Time]
+           ,[Price]
+           ,[Rating]
+           ,[CreatedDate]
+           ,[UpdatedDate]
+           ,[CreatedBy]
+           ,[ModifiedBy]
+           ,[IsDeleted]
+           )
+     VALUES
+           (1
+           ,3
+           ,13
+           ,'Dont go breaking my heart'
+           ,'3:36'
+           ,1.35
+           ,5
+           ,GETDATE()
+           ,GETDATE()
+           ,'rahul'
+           ,'Rahul123'
+           ,0
+          )
+GO
+
+
+
+
+
